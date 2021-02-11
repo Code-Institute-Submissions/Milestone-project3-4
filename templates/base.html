@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+    {% block styles %}
+    {% endblock %}
+    <title>{{title}}</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{{url_for('index')}}">Home</a></li>
+                <li><a href="{{url_for('all_recipies')}}">All recipies</a></li>
+                <li><a href="{{url_for('my_recipies')}}">My recipies</a></li>
+                <li><a href="#">Log out</a></li>
+                <li><a href="{{url_for('login')}}">Log in</a></li>
+                <li><a href="{{url_for('register')}}">Register</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        {% for i in messages %}
+            <div class="row-flashes">
+                <h2>{{i}}</h2>
+            </div>
+        {% endfor%}
+        {% endif %}
+        {% endwith %}
+    </section>
+    {% block content %}
+    {% endblock %}
+</body>
+</html>

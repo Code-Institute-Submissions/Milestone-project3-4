@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{%block content%}
+
+<section class="form-container">
+    <h1>Register</h1>
+    <div>
+        <form action="{{url_for('register')}}" method="POST">
+            <label for="username"><i class="fas fa-user-plus"></i> Username</label>
+            <input pattern="^[a-zA-Z0-9]{5,15}$" minlength="5" maxlength="15" class="input-fields" id="username" name="username" type="text" required>
+            <label for="password"><i class="fas fa-unlock-alt"></i> Password</label>
+            <input pattern="^[a-zA-Z0-9]{5,15}$" minlength="5" maxlength="15" class="input-fields" id="password" name="password" type="password" required>
+            <input value="Submit" type="submit" class="submit">
+        </form>
+    </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,102 @@
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+nav ul{
+    text-align: center;
+}
+
+nav li{
+    display: inline-block;
+    margin: 50px;
+}
+
+nav a{
+    text-decoration: none;
+    color: black;
+}
+
+#cards-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+
+}
+
+.card-container{
+    width: 250px;
+    height: 300px;
+    box-shadow: 2px 2px 2px rgba(175, 175, 175, 0.5), -2px -2px 2px rgba(175, 175, 175, 0.5);
+    margin: 15px;
+}
+
+.card-container img{
+    display: block;
+    width: 100%;
+    height: 250px; 
+    border-bottom: 1px solid rgba(128, 128, 128, 0.5);
+}
+
+.card-container h3{
+    text-align: center;
+    margin-top: 15px;
+}
+
+/*registration*/
+
+.form-container{
+    width: 60%;
+    margin: 0 auto;
+}
+
+.form-container h1{
+    text-align: center;
+    margin: 25px;
+}
+
+.form-container div{
+    width: 100%;
+    box-shadow: 5px 5px 5px rgba(175, 175, 175, 0.315), -5px -5px 5px rgba(175, 175, 175, 0.315);
+}
+
+.form-container form{
+    padding: 40px;
+}
+
+.input-fields{
+    width: 100%;
+    height: 25px;
+    border-bottom: 1px solid black;
+    display: block;
+    margin: 0 auto 20px auto;
+}
+
+input:focus{
+    outline: none;
+}
+
+.submit{
+    height: 35px;
+    width: 100%;
+    padding: 7px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: blue;
+    color: white;
+    margin-top: 25px;
+}
+
+.row-flashes{
+    width: 100%;
+    height: 50px;
+    background-color: yellow;
+    text-align: center;
+    line-height: 50px;
+}
+
