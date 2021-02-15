@@ -23,6 +23,20 @@ def index():
     return render_template("index.html")
 
 
+@app.route("/add_recipie", methods=["GET", "POST"])
+def add_recipie():
+
+    recipie = {
+        "dish": request.form.get("dish"),
+        "ingredients": request.form.getlist("ingredient"),
+        "preparations": request.form.get("preparations")
+    }
+
+    mongo.db.recipies.insert(recipie)
+    flash("Recipie added")
+    return render_template("add_recipie.html")
+
+
 @app.route("/all_recipies")
 def all_recipies():
     return render_template("all_recipies.html")

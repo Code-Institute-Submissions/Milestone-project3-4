@@ -14,6 +14,7 @@
         <nav>
             <ul>
                 <li><a href="{{url_for('index')}}">Home</a></li>
+                <li><a href="{{url_for('add_recipie')}}">Add recipie</a></li>
                 <li><a href="{{url_for('all_recipies')}}">All recipies</a></li>
                 <li><a href="{{url_for('my_recipies')}}">My recipies</a></li>
                 <li><a href="#">Log out</a></li>
@@ -34,6 +35,11 @@
         {% endwith %}
     </section>
     {% block content %}
+    {% endblock %}
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    {% block scripts %}
     {% endblock %}
 </body>
 </html>

@@ -4,7 +4,7 @@
 
 <section class="form-container">
     <h1>Register</h1>
-    <div>
+    <div class="inner-form-container">
         <form action="{{url_for('register')}}" method="POST">
             <label for="username"><i class="fas fa-user-plus"></i> Username</label>
             <input pattern="^[a-zA-Z0-9]{5,15}$" minlength="5" maxlength="15" class="input-fields" id="username" name="username" type="text" required>

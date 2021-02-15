@@ -1,5 +1,18 @@
 {% extends "base.html" %}
 
 {%block content%}
+<section class="form-container">
+    <h1>Add recipie</h1>
+    <div class="inner-form-container">
+        <form action="{{url_for('add_recipie')}}" method="POST">
+            <input placeholder="Dish" class="name-of-dish" name="dish" type="text" required>
+            <input placeholder="Add ingredient" class="ingredient-field" name="ingredient" type="text" required>
+            <div class="container-for-plus"><i class="fas fa-plus plus" onclick="newIngredients()"></i></div>
+            <div id="container-new-ingredient"></div>
+            <textarea placeholder="Preparation" class="how_to_cook_it" name="preparation" required></textarea>
+            <input value="Submit" type="submit" class="submit">
+        </form>
+    </div>
+</section>
 
 {% endblock %}
