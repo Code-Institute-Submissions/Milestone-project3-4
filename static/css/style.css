@@ -181,6 +181,12 @@ textarea:focus{
     text-align: center;
 }
 
+/*Login*/
+
+.not-a-user{
+    text-align: center;
+}
+
 
 
 
