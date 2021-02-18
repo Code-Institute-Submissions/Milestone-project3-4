@@ -14,12 +14,15 @@
         <nav>
             <ul>
                 <li><a href="{{url_for('index')}}">Home</a></li>
+                {% if session.user %}
                 <li><a href="{{url_for('add_recipie')}}">Add recipie</a></li>
                 <li><a href="{{url_for('all_recipies')}}">All recipies</a></li>
                 <li><a href="{{ url_for('profile', username=session['user']) }}">My recipies</a></li>
-                <li><a href="#">Log out</a></li>
+                <li><a href="{{url_for('logout')}}">Log out</a></li>
+                {% else %}
                 <li><a href="{{url_for('login')}}">Log in</a></li>
                 <li><a href="{{url_for('register')}}">Register</a></li>
+                {% endif %}
             </ul>
         </nav>
     </header>
