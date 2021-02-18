@@ -2,4 +2,24 @@
 
 {%block content%}
 
+
+
+<section>
+    {% for i in recipes %}
+    <div class="accordion-container">
+        <h2>{{i.dish}}</h2>
+    </div>
+    <div class="accordion-body">
+        <h3>Ingredients</h3>
+        {% for i in i.ingredients %}
+        <ul>
+        <li>{{i}}</li>
+        </ul>
+        {% endfor %}
+        <h3>Preparations</h3>
+        <p>{{i.preparations}}</p>
+    </div>
+    {% endfor %}
+</section>
+
 {% endblock %}

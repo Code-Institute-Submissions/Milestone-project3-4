@@ -107,6 +107,7 @@ input:focus{
     line-height: 50px;
 }
 
+/*Add recipe*/
 .plus{
     margin-left: -3px;
 }
@@ -129,7 +130,7 @@ input:focus{
 
 
 
-.how_to_cook_it{
+.preparation{
     height: 22px;
     width: 100%;
     margin: 0 auto 20px auto;
@@ -144,6 +145,46 @@ textarea:focus{
 .container-for-plus{
     display: inline-block;
 }
+
+/*All recipes*/
+
+.accordion-container{
+    width: 60%;
+    height: 30px;
+    font-family: roboto, sans-serif;
+    color: white;
+    background-color: blue;
+    padding: 10px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 30px;
+    border: 1px solid black;
+}
+
+.accordion-body{
+    width: 60%;
+    margin: 0 auto;
+    background-color: rgb(230, 230, 230);
+    display: none;
+}
+
+.accordion-body h3{
+    text-align: center;
+}
+
+.accordion-body ul{
+    list-style: none;
+    text-align: center;
+}
+
+.accordion-body p{
+    text-align: center;
+}
+
+
+
+
+
 
 
 

@@ -15,7 +15,6 @@ function newIngredients() {
     a.appendChild(c);
 
     minus = document.getElementsByClassName("fas fa-minus");
-    console.log(minus);
     for (i = 0; i < minus.length; i++) {
         minus[i].addEventListener("click", removeIngredient);
     }
@@ -26,21 +25,26 @@ function removeIngredient(event) {
 
     event.target.previousElementSibling.remove();
     event.target.remove();
-    console.log("hi");
 
 }
 
+//All recipies//
+
+let a = document.getElementsByClassName("accordion-container");
+
+function myFunc(accordion) {
+    if (accordion.nextElementSibling.style.display == "none") {
+        accordion.nextElementSibling.style.display = "block";
+    }
+    else {
+        accordion.nextElementSibling.style.display = "none";
+    }
+}
 
 
-
-
-
-
-
-
-
-
-
-
-
+for (let i = 0; i < a.length; i++) {
+    a[i].addEventListener('click', function () {
+        myFunc(a[i]);
+    })
+}
 
