@@ -29,7 +29,10 @@ def add_recipie():
         recipie = {
             "dish": request.form.get("dish"),
             "ingredients": request.form.getlist("ingredient"),
-            "preparations": request.form.get("preparation")
+            "preparations": request.form.getlist("add-prep"),
+            "additional_comments": request.form.get("additional"),
+            "category": request.form.get("category"),
+            "created_by": session["user"]
         }
 
         mongo.db.recipies.insert(recipie)
@@ -41,7 +44,7 @@ def add_recipie():
 def all_recipies():
     recipes = mongo.db.recipies.find()
     print(recipes)
-    return render_template("all_recipies.html", recipes=recipes)
+    return render_template("all_recipies.html", recipes=recipes, header="All Recipes")
 
 
 @app.route("/profile/<username>", methods=["GET", "POST"])
@@ -49,7 +52,18 @@ def profile(username):
     # grab the session user's username from db
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
-    return render_template("profile.html", username=username)
+
+    users_recipes = mongo.db.recipies.find({"created_by": session["user"]})
+    return render_template(
+        "profile.html", username=username, users_recipes=users_recipes, header=session["user"]+"'s recipies")
+
+
+@app.route("/edit_recipe/<recipe_id>", methods=["GET", "POST"])
+def edit_recipe(recipe_id):
+    recipe = mongo.db.tasks.find_one({"_id": ObjectId(recipe_id)})
+    categories = mongo.db.recipies.find().sort("category", 1)
+    return render_template("edit_recipe.html", recipe=recipe, categories=categories)
+
 
 
 @app.route("/login", methods=["GET", "POST"])

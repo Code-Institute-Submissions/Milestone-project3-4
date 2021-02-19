@@ -2,9 +2,9 @@
 
 {%block content%}
 <section class="form-container">
-    <h1>Add recipie</h1>
+    <h1>Edit recipe</h1>
     <div class="inner-form-container">
-        <form action="{{url_for('add_recipie')}}" method="POST">
+        <form action="{{url_for('edit_recipe', recipe_id = recipe._id)}}" method="POST">
             <label for="dish">Name of dish</label>
             <input id="dish" class="name-of-dish" name="dish" type="text" required>
             <label for="ingredient-field">Add ingredients</label>
@@ -25,7 +25,7 @@
                 <option value="gratinated">Gratinated</option>
                 <option value="bread">Bread</option>
             </select>
-            <input value="Submit" type="submit" class="submit">
+            <input value="Edit task" type="submit" class="submit">
         </form>
     </div>
 </section>

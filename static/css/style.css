@@ -10,6 +10,11 @@ body{
     border: 0;
 }
 
+.section-header{
+    text-align: center;
+    margin: 25px;
+}
+
 nav ul{
     text-align: center;
 }
@@ -113,7 +118,15 @@ input:focus{
 }
 
 .ingredient-field{
-    width: 60%;
+    width: 90%;
+    height: 25px;
+    border-bottom: 1px solid black;
+    margin: 0 auto 20px auto;
+    box-shadow: none;
+}
+
+.add-prep{
+    width: 90%;
     height: 25px;
     border-bottom: 1px solid black;
     margin: 0 auto 20px auto;
@@ -130,7 +143,7 @@ input:focus{
 
 
 
-.preparation{
+.additional{
     height: 22px;
     width: 100%;
     margin: 0 auto 20px auto;
@@ -146,6 +159,21 @@ textarea:focus{
     display: inline-block;
 }
 
+#category-select{
+    font-family: roboto, sans-serif;
+    font-size: 1em;
+    padding:10px;
+    width: 30%; 
+    background-color: rgb(240, 240, 240);
+    border: 1px solid rgb(211, 211, 211)
+}
+
+#category-select:focus{
+    outline: none;
+}
+
+
+
 /*All recipes*/
 
 .accordion-container{
@@ -153,32 +181,72 @@ textarea:focus{
     height: 30px;
     font-family: roboto, sans-serif;
     color: white;
-    background-color: blue;
-    padding: 10px;
+    background-color: rgb(75, 75, 255);
+    padding: 15px;
     margin: 0 auto;
-    text-align: center;
-    line-height: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     border: 1px solid black;
 }
+
+.accordion-container h2{
+    text-align: left;
+    display: inline-block;
+}
+
+.arrow{
+    font-size: 2em;
+}
+
+.edit-button{
+    width: 60px;
+    height: 20px;
+    padding: 5px;
+    background-color: rgb(255, 217, 0);
+    color: white;
+    font-family: roboto, sans-serif;
+    box-shadow: 2px 2px 2px rgba(94, 94, 94, 0.4);
+}
+
+.edit-button a{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+
 
 .accordion-body{
     width: 60%;
     margin: 0 auto;
-    background-color: rgb(230, 230, 230);
+    background-color: rgb(255, 255, 255);
     display: none;
+    padding: 15px;
+    border: 1px solid black;
 }
 
 .accordion-body h3{
-    text-align: center;
+    text-align: left;
+    margin-bottom: 20px;
+    margin-left: 30px;
 }
 
 .accordion-body ul{
     list-style: none;
-    text-align: center;
+    text-align: left;
+    margin-bottom: 20px;
+    margin-left: 30px;
+
 }
 
 .accordion-body p{
-    text-align: center;
+    text-align: left;
+    margin-bottom: 10px;
+    margin-left: 30px;
 }
 
 /*Login*/

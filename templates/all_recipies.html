@@ -16,8 +16,14 @@
         <li>{{i}}</li>
         </ul>
         {% endfor %}
-        <h3>Preparations</h3>
-        <p>{{i.preparations}}</p>
+        <h3>Preparation steps</h3>
+        {% for i in i.preparations %}
+        <ul>
+        <li>{{i}}</li>
+        </ul>
+        {%endfor%}
+        <h3>Additional comments</h3>
+        <p>{{i.additional_comments}}</p>
     </div>
     {% endfor %}
 </section>

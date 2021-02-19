@@ -1,7 +1,25 @@
 {% extends "base.html" %}
 
 {%block content%}
-
+<section>
+    {% for i in users_recipes %}
+    <div class="accordion-container">
+        <i class="fas fa-sort-down arrow"></i>
+        <h2>{{i.dish}}</h2>
+        <div class="edit-button"><a href="{{url_for('edit_recipe', recipe_id=i._id)}}">EDIT</a></div>
+    </div>
+    <div class="accordion-body">
+        <h3>Ingredients</h3>
+        {% for i in i.ingredients %}
+        <ul>
+        <li>{{i}}</li>
+        </ul>
+        {% endfor %}
+        <h3>Preparations</h3>
+        <p>{{i.preparations}}</p>
+    </div>
+    {% endfor %}
+</section>
 
 
 {% endblock %}
