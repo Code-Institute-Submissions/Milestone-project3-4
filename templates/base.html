@@ -10,8 +10,9 @@
     <title>{{title}}</title>
 </head>
 <body>
-    <header>
+    <header class="header">
         <nav>
+            
             <ul>
                 <li><a href="{{url_for('index')}}">Home</a></li>
                 {% if session.user %}
@@ -26,6 +27,25 @@
             </ul>
         </nav>
     </header>
+    <header class="mobile-header">
+        <i id="hamburger" class="fas fa-bars"></i>
+    </header>
+        <nav id="mobile-nav">
+            
+            <ul class="mobile-nav-ul">
+                <li><a href="{{url_for('index')}}">Home</a></li>
+                {% if session.user %}
+                <li><a href="{{url_for('add_recipie')}}">Add recipie</a></li>
+                <li><a href="{{url_for('all_recipies')}}">All recipies</a></li>
+                <li><a href="{{ url_for('profile', username=session['user']) }}">My recipies</a></li>
+                <li><a href="{{url_for('logout')}}">Log out</a></li>
+                {% else %}
+                <li><a href="{{url_for('login')}}">Log in</a></li>
+                <li><a href="{{url_for('register')}}">Register</a></li>
+                {% endif %}
+            </ul>
+        </nav>
+    
     <section>
         {% with messages = get_flashed_messages() %}
         {% if messages %}
@@ -37,7 +57,7 @@
         {% endif %}
         {% endwith %}
     </section>
-    <h1 class="section-header">{{ header }}</h1>
+    <h1 class="section-heading">{{ header }}</h1>
     {% block content %}
     {% endblock %}
 

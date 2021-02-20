@@ -3,7 +3,6 @@
 {%block content%}
 
 <section class="form-container">
-    <h1>Register</h1>
     <div class="inner-form-container">
         <form action="{{url_for('register')}}" method="POST">
             <label for="username"><i class="fas fa-user-plus"></i> Username</label>
@@ -13,6 +12,8 @@
             <input value="Submit" type="submit" class="submit">
         </form>
     </div>
+
+    <p class="not-a-user"><a href="{{url_for('login')}}">Already a user?</a></p>
 </section>
 
 {% endblock %}

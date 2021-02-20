@@ -2,12 +2,11 @@
 
 {%block content%}
 <section class="form-container">
-    <h1>Add recipie</h1>
     <div class="inner-form-container">
         <form action="{{url_for('add_recipie')}}" method="POST">
             <label for="dish">Name of dish</label>
             <input id="dish" class="name-of-dish" name="dish" type="text" required>
-            <label for="ingredient-field">Add ingredients</label>
+            <label for="ingredient-field">Add ingredient</label>
             <input id="ingredient-field" class="ingredient-field" name="ingredient" type="text" required>
             <div class="container-for-plus"><i class="fas fa-plus plus" onclick="newIngredients()"></i></div>
             <div id="container-new-ingredient"></div>
@@ -19,11 +18,10 @@
             <label for="additional">Additional comments</label>
             <textarea id="additional" class="additional" name="additional"></textarea>
             <select name="category" id="category-select" required>
-                <option value="salads">Salad</option>
-                <option value="sauces">Sauce</option>
-                <option value="christmas">Christmas</option>
-                <option value="gratinated">Gratinated</option>
-                <option value="bread">Bread</option>
+                <option value="" disabled selected>Choose Category</option>
+                {% for i in categories %}
+                <option value="{{ i.category }}">{{ i.category }}</option>
+                {% endfor %}
             </select>
             <input value="Submit" type="submit" class="submit">
         </form>

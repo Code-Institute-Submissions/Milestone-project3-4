@@ -2,11 +2,10 @@
 
 {%block content%}
 <section class="form-container">
-    <h1>Edit recipe</h1>
     <div class="inner-form-container">
         <form action="{{url_for('edit_recipe', recipe_id = recipe._id)}}" method="POST">
             <label for="dish">Name of dish</label>
-            <input id="dish" class="name-of-dish" name="dish" type="text" required>
+            <input value="{{recipe.dish}}" id="dish" class="name-of-dish" name="dish" type="text" required>
             <label for="ingredient-field">Add ingredients</label>
             <input id="ingredient-field" class="ingredient-field" name="ingredient" type="text" required>
             <div class="container-for-plus"><i class="fas fa-plus plus" onclick="newIngredients()"></i></div>
@@ -17,15 +16,19 @@
             <div class="container-for-plus"><i class="fas fa-plus plus" onclick="newPrep()"></i></div>
             <div id="container-new-prep"></div>
             <label for="additional">Additional comments</label>
-            <textarea id="additional" class="additional" name="additional"></textarea>
+            <textarea id="additional" class="additional" name="additional">{{ recipe.additional_comments}}</textarea>
             <select name="category" id="category-select" required>
-                <option value="salads">Salad</option>
-                <option value="sauces">Sauce</option>
-                <option value="christmas">Christmas</option>
-                <option value="gratinated">Gratinated</option>
-                <option value="bread">Bread</option>
+                <option value="" disabled>Choose Category</option>
+                {% for i in categories %}
+                {% if i.category == recipe.category %}
+                <option value="{{ i.category }}" selected>{{ i.category }}</option>
+                {% else %}
+                <option value="{{ i.category }}">{{ i.category }}</option>
+                {% endif %}
+                {% endfor %}
             </select>
-            <input value="Edit task" type="submit" class="submit">
+            <div class="cancel"><a href="{{ url_for('profile', username=session['user']) }}">Cancel</a></div>
+            <input class="submit" value="Edit task" type="submit" class="submit">
         </form>
     </div>
 </section>

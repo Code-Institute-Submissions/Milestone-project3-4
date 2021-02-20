@@ -73,3 +73,20 @@ for (let i = 0; i < a.length; i++) {
     })
 }
 
+let hamburger = document.getElementById("hamburger");
+
+hamburger.addEventListener("click", openMobileMenu);
+
+function openMobileMenu(){
+    let mobileNav = document.getElementById("mobile-nav");
+    if(mobileNav.style.display == "none"){
+        mobileNav.style.display = "block";
+    }
+    else{
+        mobileNav.style.display = "none"
+    }
+}
+
+
+
+
