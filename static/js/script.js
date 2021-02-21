@@ -53,40 +53,42 @@ function newPrep() {
 }
 
 
-//All recipies//
+//All recipes and my recipes//
 
-let a = document.getElementsByClassName("accordion-container");
+let a = document.getElementsByClassName("accordion");
+let i;
 
-function myFunc(accordion) {
-    if (accordion.nextElementSibling.style.display == "none") {
-        accordion.nextElementSibling.style.display = "block";
+for (i = 0; i < a.length; i++) {
+  a[i].addEventListener("click", function() {
+    
+    this.classList.toggle("active");
+
+    let panel = this.nextElementSibling;
+    
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    
+    } else {
+      panel.style.display = "block";
     }
-    else {
-        accordion.nextElementSibling.style.display = "none";
-    }
+  });
 }
 
 
-for (let i = 0; i < a.length; i++) {
-    a[i].addEventListener('click', function () {
-        myFunc(a[i]);
-    })
-}
+//mobile menu//
 
 let hamburger = document.getElementById("hamburger");
 
 hamburger.addEventListener("click", openMobileMenu);
 
-function openMobileMenu(){
+function openMobileMenu() {
     let mobileNav = document.getElementById("mobile-nav");
-    if(mobileNav.style.display == "none"){
+    if (mobileNav.style.display == "none") {
         mobileNav.style.display = "block";
     }
-    else{
+    else {
         mobileNav.style.display = "none"
     }
 }
-
-
 
 

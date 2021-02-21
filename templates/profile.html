@@ -4,26 +4,29 @@
 <section>
     {% for i in users_recipes %}
     <div class="accordion-container">
-        <i class="fas fa-sort-down arrow"></i>
-        <h2>{{i.dish}}</h2>
-        <div class="delete-button"><a href="{{url_for('delete_recipe', recipe_id=i._id)}}">DELETE</a></div>
-        <div class="edit-button"><a href="{{url_for('edit_recipe', recipe_id=i._id)}}">EDIT</a></div>
-    </div>
-    <div class="accordion-body">
-        <h3>Ingredients</h3>
-        {% for i in i.ingredients %}
-        <ul>
-        <li>{{i}}</li>
-        </ul>
-        {% endfor %}
-        <h3>Preparation steps</h3>
-        {% for i in i.preparations %}
-        <ul>
-        <li>{{i}}</li>
-        </ul>
-        {%endfor%}
-        <h3>Additional comments</h3>
-        <p>{{i.additional_comments}}</p>
+        <div class="accordion">
+            
+            <p>{{i.dish}}</p>
+            <div class="delete-button"><a href="{{url_for('delete_recipe', recipe_id=i._id)}}">Del</a></div>
+            <div class="edit-button"><a href="{{url_for('edit_recipe', recipe_id=i._id)}}">Edit</a></div>
+        </div>
+        <div class="panel">
+            <h3>Ingredients</h3>
+            {% for i in i.ingredients %}
+            <ul>
+                <li>{{i}}</li>
+            </ul>
+            {% endfor %}
+            <h3>Preparation steps</h3>
+            {% for i in i.preparations %}
+            <ul>
+                <li>{{i}}</li>
+            </ul>
+            {%endfor%}
+            <h3>Additional comments</h3>
+            <p>{{i.additional_comments}}</p>
+        </div>
+        
     </div>
     {% endfor %}
 </section>
