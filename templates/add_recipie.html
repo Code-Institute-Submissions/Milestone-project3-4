@@ -16,7 +16,7 @@
             <div class="container-for-plus"><i class="fas fa-plus plus" onclick="newPrep()"></i></div>
             <div id="container-new-prep"></div>
             <label for="additional">Additional comments</label>
-            <textarea id="additional" class="additional" name="additional"></textarea>
+            <textarea id="additional" class="additional" name="additional" required></textarea>
             <select name="category" id="category-select" required>
                 <option value="" disabled selected>Choose Category</option>
                 {% for i in categories %}

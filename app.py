@@ -20,7 +20,7 @@ mongo = PyMongo(app)
 
 @app.route("/")
 def index():
-    return render_template("index.html", header="Family Recipies")
+    return render_template("index.html", header="Family Recipes")
 
 
 @app.route("/add_recipie", methods=["GET", "POST"])
@@ -40,14 +40,16 @@ def add_recipie():
 
         mongo.db.recipies.insert(recipie)
         flash("Recipie added")
-    return render_template("add_recipie.html", categories=categories, header="Add Recipe")
+    return render_template(
+        "add_recipie.html", categories=categories, header="Add Recipe")
 
 
 @app.route("/all_recipies")
 def all_recipies():
     recipes = mongo.db.recipies.find()
     print(recipes)
-    return render_template("all_recipies.html", recipes=recipes, header="All Recipes")
+    return render_template(
+        "all_recipies.html", recipes=recipes, header="All Recipes")
 
 
 @app.route("/profile/<username>", methods=["GET", "POST"])
@@ -85,7 +87,7 @@ def edit_recipe(recipe_id):
 @app.route("/delete_recipe/<recipe_id>")
 def delete_recipe(recipe_id):
     mongo.db.recipies.remove({"_id": ObjectId(recipe_id)})
-    flash("Task Successfully Deleted")
+    flash("Recipe Deleted")
     return redirect(url_for("profile", username=session["user"]))
 
 

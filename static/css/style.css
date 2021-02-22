@@ -3,6 +3,12 @@
 
 body{
     font-family: roboto, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-image: url("https://images.pexels.com/photos/616484/pexels-photo-616484.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500") ;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 *{
@@ -11,7 +17,7 @@ body{
     border: 0;
 }
 
-@media(min-width: 280px){
+
 
 
 .section-heading{
@@ -25,10 +31,14 @@ body{
     display:none;
 }
 
+#hamburger{
+    color: white;
+}
+
 .mobile-header{
     font-size: 1.5em;
     height: 50px;
-    background-color: rgba(61, 106, 242);
+    background-color: #023859;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -41,16 +51,20 @@ body{
 
 
 .mobile-nav-ul{
-    height: 70vh;
+    height: 50vh;
     width: 75%;
-    background-color: rgb(209, 209, 209);
-
+    background-color: #DAF2C2;
+    padding-top: 25px;
+    list-style-type: none;
 }
 
-
+#mobile-nav li:hover{
+    background-color: #F2DB66;
+}
 
 #mobile-nav li{
-    padding: 15px;
+    line-height: 45px;
+    padding-left: 15px;
 }
 
 #mobile-nav a{
@@ -60,24 +74,18 @@ body{
 
 #home{
     margin: 0 auto;
-    width: 80%;
+    width: 70%;
     box-shadow: 5px 5px 7px rgba(54, 54, 54, 0.2), -5px -5px 7px rgba(54, 54, 54, 0.2);
-    padding: 30px;
-    grid-template-columns: auto auto;
+    padding: 20px;
     font-family: "handlee";
     font-size: 1.2rem;
+    background-color: white;
 
 
-}
-
-.text-container-home{
-    display: grid;
 }
 
 .text-container-home article{
-    grid-column-start: 1;
-    grid-column-end: 2;
-    margin-top: 60px;
+    margin-top: 30px;
 }
 
 .text-container-home p{
@@ -92,20 +100,413 @@ body{
 }
 
 
-#home img{
-    grid-column-start: 3;
-    grid-column-end: 4;
+/*registration*/
+
+.form-container{
+    width: 90%;
+    margin: 0 auto;
+    background-color: white;
+}
+
+.form-container h1{
+    text-align: center;
+    margin: 25px;
+}
+
+.inner-form-container{
     width: 100%;
-    display: none;
+    box-shadow: 5px 5px 5px rgba(175, 175, 175, 0.315), -5px -5px 5px rgba(175, 175, 175, 0.315);
+}
+
+.form-container form{
+    padding: 20px;
+}
+
+.input-fields{
+    width: 100%;
+    height: 25px;
+    border-bottom: 1px solid #000000;
+    display: block;
+    margin: 0 auto 20px auto;
+    font-family: roboto, sans-serif;
+}
+
+input:focus{
+    outline: none;
+}
+
+.submit{
+    height: 40px;
+    width: 100%;
+    padding: 7px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #023859;
+    color: white;
+    margin-top: 25px;
+    font-size: 1rem;
+    font-family: roboto, sans-serif;
+}
+
+.cancel{
+    height: 40px;
+    width: 100%;
+    padding: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    margin-top: 25px;
+    font-size: 1rem;
+    font-family: roboto, sans-serif;
+    box-sizing: border-box;
+}
+
+.cancel a{
+    color: white;
+    text-decoration: none;
+}
+
+.row-flashes{
+    width: 100%;
+    height: 50px;
+    background-color: #07D9B2;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+}
+
+/*Add recipe*/
+.plus{
+    margin-left: -3px;
+}
+
+.ingredient-field{
+    width: 90%;
+    height: 25px;
+    border-bottom: 1px solid #000000;
+    margin: 0 auto 20px auto;
+    box-shadow: none;
+}
+
+.add-prep{
+    width: 90%;
+    height: 25px;
+    border-bottom: 1px solid #000000;
+    margin: 0 auto 20px auto;
+    box-shadow: none;
+}
+
+.name-of-dish{
+    width: 100%;
+    height: 25px;
+    border-bottom: 1px solid #000000;
+    margin: 0 auto 20px auto;
+    box-shadow: none;
+}
+
+
+
+.additional{
+    height: 22px;
+    width: 100%;
+    margin: 0 auto 20px auto;
+    border-bottom: 1px solid #000000;
+    font-family: roboto, sans-serif;
+}
+
+textarea:focus{
+    outline: none;
+}
+
+.container-for-plus{
+    display: inline-block;
+}
+
+#category-select{
+    font-family: roboto, sans-serif;
+    font-size: 1em;
+    padding:10px;
+    width: 100%; 
+    background-color: rgb(240, 240, 240);
+    border: 1px solid #000000;
+}
+
+#category-select:focus{
+    outline: none;
+}
+
+
+
+/*All recipes*/
+
+.accordion-container{
+    width: 90%;
+    margin: 0 auto; 
+}
+
+.accordion{
+    height: 30px;
+    border: 1px solid black;
+    font-family: roboto, sans-serif;
+    color: white;
+    background-color: #023859;
+    padding: 5px;
+}
+
+.accordion:hover {
+  background-color: #F2DB66;
+  color: #023859;
+}
+
+.accordion::after{
+    content: '\02795';
+    font-size: 13px;
+    float: left;
+    display: inline;
+    line-height: 30px;
+    margin-right: 5px;
+}
+
+.active::after{
+    content: "\2796";
+}
+
+
+.accordion p{
+    font-size: 0.8em;
+    display: inline;
+    line-height: 30px;
+
+}
+
+.delete-button{
+    padding: 3px;
+    background-color: red;
+    font-family: roboto, sans-serif;
+    width: 40px;
+    height: 20px;
+    float:right;
+    line-height: 30px;
+    margin: 3px;
     
+}
+
+.delete-button a{
+    display:flex;
+    line-height: 20px;
+    justify-content: center;
+    color: white;
+    text-decoration: none; 
+    font-size: 0.9em;
+}
+
+
+
+.edit-button{
+    padding: 3px;
+    background-color: #07D9B2;
+    font-family: roboto, sans-serif;
+    width: 40px;
+    height: 20px;
+    float:right;
+    line-height: 30px;
+    margin: 3px;
+}
+
+.edit-button a{
+    display:flex;
+    line-height: 20px;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    font-size: 0.9em;
+}
+
+
+
+.panel{
+    background-color: rgb(255, 255, 255);
+    display: none;
+    padding: 5px;
+    border: 1px solid #000000;
+}
+
+.panel h3{
+    text-align: left;
+    margin-bottom: 20px;
+    margin-left: 10px;
+}
+
+.panel ul{
+    list-style: none;
+    text-align: left;
+    margin-bottom: 20px;
+    margin-left: 10px;
+
+}
+
+.panel p{
+    text-align: left;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+/*Login*/
+
+.not-a-user{
+    text-align: center;
+    margin-top: 15px;
+}
+
+.not-a-user a{
+    text-decoration: none;
+    color: black;
+}
+
+/*Footer*/
+
+#footer-container{
+    margin-top: 40px;
+}
+
+#footer{
+    height: 75px;
+    width: 100%;
+    background-color: #023859;;
+    font-size: 10px;
+    margin-top: auto;
+}
+
+#footer ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+}
+
+#footer li{
+    margin-top: 20px;
+}
+
+#footer a{
+    color: white;
+    text-decoration: none;
+}
+
+#footer li:hover{
+    transform:rotate(5deg);
+}
+
+.contact{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.contact a{
+    margin-top: 10px;
+}
+
+.contact a:hover{
+    transform:rotate(5deg);
+}
+
+
+
+@media(min-width: 768px){
+
+.section-heading{
+    text-align: center;
+    margin-top: 45px;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    background-color: #023859;
+}
+
+
+
+.header ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header li{
+    display: inline-block;
+    margin: 10px;
+}
+
+.header li:hover{
+    transform: rotate(5deg);
+}
+
+.header a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.3em;
+}
+
+.mobile-header{
+    font-size: 1.5em;
+    height: 50px;
+    background-color: #023859;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 25px;
+    display: none;
+}
+
+#mobile-nav{
+    display: none;
+}
+
+#home{
+    margin: 30px auto 0 auto;
+    width: 55%;
+    box-shadow: 5px 5px 7px rgba(54, 54, 54, 0.2), -5px -5px 7px rgba(54, 54, 54, 0.2);
+    padding: 30px;
+    font-family: "handlee";
+    font-size: 1.2rem;
+    background-color: white;
+}
+
+.text-container-home article{
+    margin-top: 15px;
+}
+
+.text-container-home p{
+    margin-top: 10px;
+    letter-spacing: 1px;
+}
+
+.text-container-home h2{
+    text-align: center;
+    margin-bottom: 5px;
+    letter-spacing: 2px;
 }
 
 
 /*registration*/
 
 .form-container{
-    width: 90%;
+    width: 50%;
     margin: 0 auto;
+    background-color: white;
 }
 
 .form-container h1{
@@ -143,11 +544,15 @@ input:focus{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #0540F2;
+    background-color:#023859;
     color: white;
     margin-top: 25px;
     font-size: 1rem;
     font-family: roboto, sans-serif;
+}
+
+.submit:hover{
+    background-color: #07D9B2;
 }
 
 .cancel{
@@ -158,7 +563,7 @@ input:focus{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #F24130;
+    background-color: red;
     margin-top: 25px;
     font-size: 1rem;
     font-family: roboto, sans-serif;
@@ -173,7 +578,7 @@ input:focus{
 .row-flashes{
     width: 100%;
     height: 50px;
-    background-color: yellow;
+    background-color: #07D9B2;
     text-align: center;
     line-height: 50px;
 }
@@ -231,7 +636,7 @@ textarea:focus{
     padding:10px;
     width: 100%; 
     background-color: rgb(240, 240, 240);
-    border: 1px solid rgb(211, 211, 211)
+    border: 1px solid #023859;
 }
 
 #category-select:focus{
@@ -243,7 +648,7 @@ textarea:focus{
 /*All recipes*/
 
 .accordion-container{
-    width: 90%;
+    width: 50%;
     margin: 0 auto; 
 }
 
@@ -252,12 +657,13 @@ textarea:focus{
     border: 1px solid black;
     font-family: roboto, sans-serif;
     color: white;
-    background-color: #0540F2;
+    background-color: #023859;
     padding: 5px;
 }
 
 .accordion:hover {
-  background-color: #ccc;
+  background-color: white;
+  color: #023859;
 }
 
 .accordion::after{
@@ -283,7 +689,7 @@ textarea:focus{
 
 .delete-button{
     padding: 3px;
-    background-color: #F24130;
+    background-color: red;
     font-family: roboto, sans-serif;
     width: 40px;
     height: 20px;
@@ -291,6 +697,14 @@ textarea:focus{
     line-height: 30px;
     margin: 3px;
     
+}
+
+.edit-button:hover{
+    transform: rotate(5deg)
+}
+
+.delete-button:hover{
+    transform: rotate(5deg)
 }
 
 .delete-button a{
@@ -306,7 +720,7 @@ textarea:focus{
 
 .edit-button{
     padding: 3px;
-    background-color: #F24130;
+    background-color: #07D9B2;
     font-family: roboto, sans-serif;
     width: 40px;
     height: 20px;
@@ -360,344 +774,55 @@ textarea:focus{
     margin-top: 15px;
 }
 
+.not-a-user a:hover{
+    color:#023859;
+}
+
+
+
 .not-a-user a{
     text-decoration: none;
     color: black;
 }
 
-}
-
-
-
-
-@media(min-width: 1024px){
-
-.mobile-header{
-    display: none;
-}
-
-.header{
-    display: block;
-}
-
-.section-header{
-    text-align: center;
-    margin-top: 45px;
-    margin-bottom: 20px;
-    letter-spacing: 2px;
-}
-
-
-header nav{
-    height: 100px;
-    background-color: rgba(61, 106, 242);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-nav ul{
-    text-align: center;
-    display:block;
-}
-
-nav li{
-    display: inline-block;
-    margin: 35px;
-}
-
-nav a{
-    text-decoration: none;
-    color: white;
-    font-size: 1.5rem;
-}
-
-#home{
-    margin: 0 auto;
-    width: 70%;
-    box-shadow: 5px 5px 7px rgba(54, 54, 54, 0.2), -5px -5px 7px rgba(54, 54, 54, 0.2);
-    padding: 30px;
-    grid-template-columns: auto auto;
-    font-family: "handlee";
-    font-size: 1.2rem;
-
-
-}
-
-.text-container-home{
-    display: grid;
-}
-
-.text-container-home article{
-    grid-column-start: 1;
-    grid-column-end: 2;
+#footer-container{
     margin-top: 60px;
 }
-
-.text-container-home p{
-    margin-top: 10px;
-    letter-spacing: 1px;
-}
-
-.text-container-home h2{
-    text-align: center;
-    margin-bottom: 5px;
-    letter-spacing: 2px;
-}
-
-
-#home img{
-    grid-column-start: 3;
-    grid-column-end: 4;
+#footer{
+    height: 100px;
     width: 100%;
-    display: inline-block;
-    
+    background-color: #023859;;
+    font-size: 13px;
+    margin-top: auto;
 }
 
-
-/*registration*/
-
-.form-container{
-    width: 90%;
-    margin: 0 auto;
-}
-
-.form-container h1{
-    text-align: center;
-    margin: 25px;
-}
-
-.inner-form-container{
-    width: 100%;
-    box-shadow: 5px 5px 5px rgba(175, 175, 175, 0.315), -5px -5px 5px rgba(175, 175, 175, 0.315);
-}
-
-.form-container form{
-    padding: 40px;
-}
-
-.input-fields{
-    width: 100%;
-    height: 25px;
-    border-bottom: 1px solid black;
-    display: block;
-    margin: 0 auto 20px auto;
-    font-family: roboto, sans-serif;
-}
-
-input:focus{
-    outline: none;
-}
-
-.submit{
-    height: 40px;
-    width: 100%;
-    padding: 7px;
-    border: 1px solid black;
+#footer ul{
+    list-style-type: none;
     display: flex;
+    flex-direction: row;
     justify-content: center;
-    align-items: center;
-    background-color: #0540F2;
-    color: white;
+    gap: 10px;
+}
+
+#footer li{
     margin-top: 25px;
-    font-size: 1rem;
-    font-family: roboto, sans-serif;
 }
 
-.cancel{
-    height: 40px;
-    width: 100%;
-    padding: 7px;
-    border: 1px solid black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #F24130;
-    margin-top: 25px;
-    font-size: 1rem;
-    font-family: roboto, sans-serif;
-    box-sizing: border-box;
-}
-
-.cancel a{
+#footer a{
     color: white;
     text-decoration: none;
 }
 
-.row-flashes{
-    width: 100%;
-    height: 50px;
-    background-color: yellow;
-    text-align: center;
-    line-height: 50px;
+.contact a:hover{
+    transform:rotate(5deg);
 }
 
-/*Add recipe*/
-.plus{
-    margin-left: -3px;
-}
-
-.ingredient-field{
-    width: 90%;
-    height: 25px;
-    border-bottom: 1px solid black;
-    margin: 0 auto 20px auto;
-    box-shadow: none;
-}
-
-.add-prep{
-    width: 90%;
-    height: 25px;
-    border-bottom: 1px solid black;
-    margin: 0 auto 20px auto;
-    box-shadow: none;
-}
-
-.name-of-dish{
-    width: 100%;
-    height: 25px;
-    border-bottom: 1px solid black;
-    margin: 0 auto 20px auto;
-    box-shadow: none;
-}
-
-
-
-.additional{
-    height: 22px;
-    width: 100%;
-    margin: 0 auto 20px auto;
-    border-bottom: 1px solid black;
-    font-family: roboto, sans-serif;
-}
-
-textarea:focus{
-    outline: none;
-}
-
-.container-for-plus{
-    display: inline-block;
-}
-
-#category-select{
-    font-family: roboto, sans-serif;
-    font-size: 1em;
-    padding:10px;
-    width: 30%; 
-    background-color: rgb(240, 240, 240);
-    border: 1px solid rgb(211, 211, 211)
-}
-
-#category-select:focus{
-    outline: none;
-}
-
-
-
-/*All recipes*/
-
-.accordion-container{
-    width: 60%;
-    height: 30px;
-    font-family: roboto, sans-serif;
-    color: white;
-    background-color: #0540F2;
-    padding: 15px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 20px 1fr 1fr 70px 70px;
-    border: 1px solid black;
-    grid-gap: 20px;
-}
-
-.accordion-container h2{
-    grid-column-start: 2;
-
-}
-
-.arrow{
-    font-size: 2em;
-    grid-column-start: 1;
-}
-
-.delete-button{
-    grid-column-start: 4;
-    padding: 5px;
-    background-color: #F24130;
-    font-family: roboto, sans-serif;
-    box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.4);
-}
-
-.delete-button a{
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    text-decoration: none; 
-}
-
-
-
-.edit-button{
-    grid-column-start: 5;
-    padding: 5px;
-    background-color: #02732A;
-    font-family: roboto, sans-serif;
-    box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.4);
-}
-
-.edit-button a{
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    text-decoration: none;
-}
-
-
-
-.accordion-body{
-    width: 60%;
-    margin: 0 auto;
-    background-color: rgb(255, 255, 255);
-    display: none;
-    padding: 15px;
-    border: 1px solid black;
-}
-
-.accordion-body h3{
-    text-align: left;
-    margin-bottom: 20px;
-    margin-left: 30px;
-}
-
-.accordion-body ul{
-    list-style: none;
-    text-align: left;
-    margin-bottom: 20px;
-    margin-left: 30px;
-
-}
-
-.accordion-body p{
-    text-align: left;
-    margin-bottom: 10px;
-    margin-left: 30px;
-}
-
-/*Login*/
-
-.not-a-user{
-    text-align: center;
-    margin-top: 15px;
-}
-
-.not-a-user a{
-    text-decoration: none;
-    color: black;
+#footer li:hover{
+    transform:rotate(5deg);
 }
 
 }
+
 
 
 
