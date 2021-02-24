@@ -5,10 +5,21 @@
 
 
 <section>
+    <div id="choose-category-container">
+        <div id="choose-category">
+            <p>Filter by category</p>
+        </div>
+        <nav>
+            <ul>
+                {%for i in categories%}
+                <li><a href="{{url_for('categories', category=i['category'])}}">{{i["category"]}}</a></li>
+                {%endfor%}
+            </ul>
+        </nav>
+    </div>
     {% for i in recipes %}
     <div class="accordion-container">
         <div class="accordion">
-
             <p>{{i.dish}}</p>
         </div>
         <div class="panel">

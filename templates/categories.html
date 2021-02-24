@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{%block content%}
+<section>
+    {% for i in food_category %}
+    <div class="accordion-container">
+        <div class="accordion">
+            <p>{{i["dish"]}}</p>
+        </div>
+        <div class="panel">
+            <h3>Ingredients</h3>
+            <ul>
+                {% for i in i["ingredients"] %}
+                <li>{{i}}</li>
+                {% endfor %}
+            </ul>
+            <h3>Preparation steps</h3>
+            <ul>
+                {% for i in i["preparations"] %}
+                <li>{{i}}</li>
+                {% endfor %}
+            </ul>
+            <h3>Additional comments</h3>
+            <p>{{i["additional_comments"]}}</p>
+        </div>
+    </div>
+    {% endfor %}
+</section>
+
+
+
+
+{% endblock %}

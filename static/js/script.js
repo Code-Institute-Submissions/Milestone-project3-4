@@ -91,4 +91,21 @@ function openMobileMenu() {
     }
 }
 
+//Click effect filter//
+
+let clickFilter = document.getElementById("choose-category");
+clickFilter.addEventListener("click", filterOptions);
+function filterOptions(){
+    if(clickFilter.nextElementSibling.style.display == "none"){
+        clickFilter.nextElementSibling.style.display = "block";
+    }
+    else{
+        clickFilter.nextElementSibling.style.display = "none";
+    }
+    
+}
+
+
+
+
 

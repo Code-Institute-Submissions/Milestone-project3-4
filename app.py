@@ -46,10 +46,17 @@ def add_recipie():
 
 @app.route("/all_recipies")
 def all_recipies():
-    recipes = mongo.db.recipies.find()
-    print(recipes)
+    categories = mongo.db.categories.find().sort("category", 1)
+    recipes = mongo.db.recipies.find().sort("category", 1)
     return render_template(
-        "all_recipies.html", recipes=recipes, header="All Recipes")
+        "all_recipies.html", recipes=recipes,
+        header="All Recipes", categories=categories)
+
+
+@app.route("/categories/<category>")
+def categories(category):
+    food_category = mongo.db.recipies.find({"category": category})
+    return render_template("categories.html", food_category=food_category, header=category)
 
 
 @app.route("/profile/<username>", methods=["GET", "POST"])
