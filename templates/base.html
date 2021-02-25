@@ -34,7 +34,7 @@
     </header>
     <nav id="mobile-nav">
 
-        <ul class="mobile-nav-ul">
+        <ul id="mobile-nav-ul">
             <li><a href="{{url_for('index')}}">Home</a></li>
             {% if session.user %}
             <li><a href="{{url_for('add_recipie')}}">Add recipe</a></li>

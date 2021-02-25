@@ -19,16 +19,16 @@
             <textarea id="additional" class="additional" name="additional">{{ recipe.additional_comments}}</textarea>
             <select name="category" id="category-select" required>
                 <option value="" disabled>Choose Category</option>
-                {% for i in categories %}
-                {% if i.category == recipe.category %}
-                <option value="{{ i.category }}" selected>{{ i.category }}</option>
-                {% else %}
-                <option value="{{ i.category }}">{{ i.category }}</option>
-                {% endif %}
+                {% for category in categories %}
+                    {% if category.category == recipe.category %}
+                        <option value="{{ category.category }}" selected>{{ category.category }}</option>
+                    {% else %}
+                        <option value="{{ category.category }}">{{ category.category }}</option>
+                    {% endif %}
                 {% endfor %}
             </select>
-            <div class="cancel"><a href="{{ url_for('profile', username=session['user']) }}">Cancel</a></div>
-            <input class="submit" value="Edit task" type="submit" class="submit">
+            <a class="cancel" href="{{ url_for('profile', username=session['user']) }}">Cancel</a>
+            <input class="submit" value="Edit task" type="submit">
         </form>
     </div>
 </section>

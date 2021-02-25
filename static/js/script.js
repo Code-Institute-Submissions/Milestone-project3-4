@@ -102,8 +102,9 @@ function filterOptions(){
     else{
         clickFilter.nextElementSibling.style.display = "none";
     }
-    
+    s
 }
+
 
 
 
