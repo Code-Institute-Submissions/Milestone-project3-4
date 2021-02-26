@@ -30,23 +30,21 @@
         </nav>
     </header>
     <header class="mobile-header">
-        <i id="hamburger" class="fas fa-bars"></i>
+        <i onclick="openNav()" id="hamburger" class="fas fa-bars"></i>
     </header>
-    <nav id="mobile-nav">
-
-        <ul id="mobile-nav-ul">
-            <li><a href="{{url_for('index')}}">Home</a></li>
-            {% if session.user %}
-            <li><a href="{{url_for('add_recipie')}}">Add recipe</a></li>
-            <li><a href="{{url_for('all_recipies')}}">All recipes</a></li>
-            <li><a href="{{ url_for('profile', username=session['user']) }}">My recipes</a></li>
-            <li><a href="{{url_for('logout')}}">Log out</a></li>
-            {% else %}
-            <li><a href="{{url_for('login')}}">Log in</a></li>
-            <li><a href="{{url_for('register')}}">Register</a></li>
-            {% endif %}
-        </ul>
-    </nav>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="{{url_for('index')}}">Home</a>
+        {% if session.user %}
+        <a href="{{url_for('add_recipie')}}">Add recipe</a>
+        <a href="{{url_for('all_recipies')}}">All recipes</a>
+        <a href="{{ url_for('profile', username=session['user']) }}">My recipes</a>
+        <a href="{{url_for('logout')}}">Log out</a>
+        {% else %}
+        <a href="{{url_for('login')}}">Log in</a>
+        <a href="{{url_for('register')}}">Register</a>
+        {% endif %}
+    </div>
 
     <section>
         {% with messages = get_flashed_messages() %}
@@ -79,7 +77,7 @@
                 {% else %}
                 <li><a href="{{url_for('login')}}">Log in</a></li>
                 <li><a href="{{url_for('register')}}">Register</a></li>
-                
+
                 {% endif %}
             </ul>
         </nav>

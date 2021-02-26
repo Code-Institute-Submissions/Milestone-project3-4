@@ -77,19 +77,18 @@ for (i = 0; i < a.length; i++) {
 
 //mobile menu//
 
-let hamburger = document.getElementById("hamburger");
 
-hamburger.addEventListener("click", openMobileMenu);
-
-function openMobileMenu() {
-    let mobileNav = document.getElementById("mobile-nav");
-    if (mobileNav.style.display == "none") {
-        mobileNav.style.display = "block";
-    }
-    else {
-        mobileNav.style.display = "none"
-    }
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
 }
+
+/* Set the width of the side navigation to 0 */
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+
+
+
 
 //Click effect filter//
 
@@ -102,9 +101,8 @@ function filterOptions(){
     else{
         clickFilter.nextElementSibling.style.display = "none";
     }
-    s
+    
 }
-
 
 
 
