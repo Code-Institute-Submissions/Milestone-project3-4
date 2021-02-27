@@ -1,23 +1,25 @@
-#Flask family recipe app
+# Flask family recipe app
 
-##UX
+## TOC
 
-##Features
+## UX
 
-###Existing features
+## Features
 
-###Features left to implement
+### Existing features
 
-##Technologies used
+### Features left to implement
 
-##Testing
+## Technologies used
 
-##Deployment
+## Testing
 
-##Credits
+## Deployment
 
-###Content
+## Credits
 
-###Media
+### Content
 
-###Acknowledgements
+### Media
+
+### Acknowledgements
