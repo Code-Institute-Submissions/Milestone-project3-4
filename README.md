@@ -234,14 +234,16 @@ The edit function is not as i want it. I am just not competent enough so far to 
    3. Heroku will now receive the code from GitHub, and start building the app
    4. Click view to launch the app
 
-
-
-
-
 ## Credits
 
 ### Content
 
+I got some help from my mentor and the tutor team. They are good at nodding me in the right direction when i need it
+
 ### Media
 
+I found the images i use on [Pexels](https://www.pexels.com/sv-se/) 
+
 ### Acknowledgements
+
+I was inspired to use accordions for the project by looking at the Mini project code institute videos
