@@ -10,7 +10,7 @@
   * In this way she can once and for all make sure that we all know how to cook the christmas food properly, that is, how it has always been cooked
 * My dad
   * He is not much of a chef really. He needs some advice now and then. He often asks how to do things. Now he can just log in here
-*  Me
+* Me
   * I want to have easy access to the christmas food for instance. I always asks my mum
   * I want a place to store all my best recipes and i like to share them with others
 
