@@ -56,10 +56,29 @@
   * If filling out only the username field and trying to submit, the user should also get a message like above but under the password field
   * It should not be possible to enter whitespaces
   * If the user enters a username and a password in the correct format, a flash message should display and the user should be redirected to the profile page
-  * The title of the page should read "user"'s recipes
+  * The title of the page should read "user's recipes"
   * In MongoDb there should be a new user in the "users" collection
+  * Under the form there is a link that when clicked takes the user to the login page
 
 **Result**: As expected.
+
+* Log in
+  * It shouldn't be possible to get in without entering the correct credentials
+  * If entering the wrong credentials a flashmessage will show up
+  * Both fields are required so if hovering over the fields when empty a message will show up
+  * If trying to submit with empty field a message will show up
+  * When logged in the user will be redirected to the profile page and a welcome flash message will show up
+  * The page title should read "user's recipes"
+  * Under the form there is a link that when clicked takes the user to the register page
+
+**Result**: As expected.
+
+* Log out
+  * When pressing the log out button the user will be logged out
+  * A flash message will show up
+  * The user is being redirected to the login page
+
+
 
 
 
