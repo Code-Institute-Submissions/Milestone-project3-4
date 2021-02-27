@@ -106,6 +106,20 @@
 
 **Result**: As expected.
 
+* My recipes
+  * All recipes entered the user should appear
+  * When pressing an accordion it should open and reveal the recipe
+  * When the accordion opens the + should change to -
+  * When pressing the accordion again the accordion should close and the - change to +
+  * When pressing the edit button, the edit recipe page should appear
+  * When pressing the delete button, the recipe should be removed
+
+**Result**: As expected.
+
+
+
+
+
 
 
 
