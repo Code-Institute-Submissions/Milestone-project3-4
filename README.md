@@ -29,6 +29,9 @@
 
 ## Testing
 
+* The desktop menu
+ * Test all the menu items 
+
 ## Deployment
 
 ## Credits
