@@ -440,11 +440,11 @@ textarea:focus{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 10px;
 }
 
 #footer li{
     margin-top: 20px;
+    padding: 3px;
 }
 
 #footer a{
