@@ -615,7 +615,8 @@ input:focus{
     margin-top: 25px;
     font-size: 1rem;
     font-family: roboto, sans-serif;
-    border-radius: none;
+    -webkit-appearance: none;
+    -webkit-border-radius: 0px;
 }
 
 .submit:hover{
