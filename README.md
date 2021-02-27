@@ -119,19 +119,19 @@
 
 ### Validation
 
-* [HTML](https://validator.w3.org/#validate_by_input)
+* [HTML validation with W3C Logo Markup Validation Service](https://validator.w3.org/#validate_by_input)
   * There are both errors and warnings but all of them are because i use the Flask framework
 
-* [CSS](https://jigsaw.w3.org/css-validator/)
+* [CSS validation with W3C css validation service](https://jigsaw.w3.org/css-validator/)
   * No errors
 
-* [JS](https://jshint.com/)
+* [Javascript validation with JSHint](https://jshint.com/)
   * A missing semicolon. *Fixed that*
   * 6 undefined variables. *Fixed that*
   * 4 unused variables. *It's my functions and i use them*
   * 13 warnings: 'let' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz). *I remember from the last project that i don't have to worry about this*
 
-* [Python](http://pep8online.com/)
+* [Python pep8 validation using PEP8 online](http://pep8online.com/)
   * It told me some of my lines were to long. *Fixed that*
 
 
