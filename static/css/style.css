@@ -615,6 +615,7 @@ input:focus{
     margin-top: 25px;
     font-size: 1rem;
     font-family: roboto, sans-serif;
+    border-radius: 0;
 }
 
 .submit:hover{
