@@ -29,6 +29,8 @@
 
 ## Testing
 
+### Manual testing
+
 * The desktop menu
   * Test the navigation
   * Hover over the items to see a change of state
@@ -77,6 +79,42 @@
   * When pressing the log out button the user will be logged out
   * A flash message will show up
   * The user is being redirected to the login page
+
+**Result**: As expected.
+
+* Add recipe
+  * The user fills in the form and pushes submit. Then a new recipe appears in MongoDB
+  * When the user pushes the plus sign, a new add ingredient or preparation step field appears
+  * When clicking the minus, the add ingredient/add preparation step is removed
+
+**Result**: As expected.
+
+* Edit recipe
+  * The current name of the dish and the additional comments appears
+  * If updating, the user has to enter all the ingredients again, with the new ingredients
+  * When pressing submit, the recipe is updated in MongoDb
+  * Otherwise the form should work as the add recipe form
+
+**Result**: As expected.
+
+* All recipes
+  * All recipes entered, by all users, should appear
+  * When pressing an accordion it should open and reveal the recipe
+  * When the accordion opens the + should change to -
+  * When pressing the accordion again the accordion should close and the - change to +
+  * Test the filter function
+
+**Result**: As expected.
+
+
+
+
+
+
+
+
+
+
 
 
 
