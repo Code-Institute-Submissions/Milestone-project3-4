@@ -460,11 +460,11 @@ textarea:focus{
     display: flex;
     justify-content: center;
     flex-direction: row;
-    gap: 10px;
 }
 
 .contact a{
     margin-top: 10px;
+    padding: 3px;
 }
 
 .contact a:hover{
