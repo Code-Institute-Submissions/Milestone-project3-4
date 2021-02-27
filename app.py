@@ -22,7 +22,9 @@ mongo = PyMongo(app)
 
 @app.route("/")
 def index():
-    return render_template("index.html", header="Family Recipes")
+    return render_template(
+        "index.html", header="Family Recipes",
+        title="Family recipes, homepage")
 
 # Add recipe
 
@@ -45,7 +47,8 @@ def add_recipie():
         mongo.db.recipies.insert(recipie)
         flash("Recipie added")
     return render_template(
-        "add_recipie.html", categories=categories, header="Add Recipe")
+        "add_recipie.html", categories=categories,
+        header="Add Recipe", title="Family recipes, add recipe")
 
 # All recipes
 
@@ -56,7 +59,8 @@ def all_recipies():
     recipes = mongo.db.recipies.find().sort("category", 1)
     return render_template(
         "all_recipies.html", recipes=recipes,
-        header="All Recipes", categories=categories)
+        header="All Recipes", categories=categories,
+        title="Family recipes, all recipes")
 
 # Categories
 
@@ -65,7 +69,8 @@ def all_recipies():
 def categories(category):
     food_category = mongo.db.recipies.find({"category": category})
     return render_template(
-        "categories.html", food_category=food_category, header=category)
+        "categories.html", food_category=food_category,
+        header=category, title="Family recipes, categories")
 
 # Users page
 
@@ -77,7 +82,9 @@ def profile(username):
 
     users_recipes = mongo.db.recipies.find({"created_by": session["user"]})
     return render_template(
-        "profile.html", username=username, users_recipes=users_recipes, header=session["user"]+"'s recipes")
+        "profile.html", username=username, users_recipes=users_recipes,
+        header=session["user"]+"'s recipes",
+        title="Family recipes, users page")
 
 # Edit recipe
 
@@ -101,7 +108,8 @@ def edit_recipe(recipe_id):
     recipe = mongo.db.recipies.find_one({"_id": ObjectId(recipe_id)})
     categories = mongo.db.categories.find().sort("category", 1)
     return render_template(
-        "edit_recipe.html", recipe=recipe, categories=categories, header="Edit Recipe")
+        "edit_recipe.html", recipe=recipe, categories=categories,
+        header="Edit Recipe", title="Family recipes, edit")
 
 
 # Delete recipe
@@ -135,7 +143,8 @@ def login():
             flash("Incorrect Username and/or Password")
             return redirect(url_for("login"))
 
-    return render_template("login.html", header="Login")
+    return render_template("login.html", header="Login",
+                           title="Family recipes, login")
 
 # Register
 
@@ -158,7 +167,8 @@ def register():
         session["user"] = request.form.get("username").lower()
         flash("You are registered!")
         return redirect(url_for("profile", username=session["user"]))
-    return render_template("register.html", header="Register")
+    return render_template("register.html", header="Register",
+                           title="Family recipes, register")
 
 # logout
 

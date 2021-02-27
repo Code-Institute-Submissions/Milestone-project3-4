@@ -15,7 +15,7 @@ function newIngredients() {
     a.appendChild(b);
     a.appendChild(c);
 
-    minus = document.getElementsByClassName("fas fa-minus");
+    let minus = document.getElementsByClassName("fas fa-minus");
     for (i = 0; i < minus.length; i++) {
         minus[i].addEventListener("click", removeIngredient);
     }
@@ -46,7 +46,7 @@ function newPrep() {
     a.appendChild(b);
     a.appendChild(c);
 
-    minus = document.getElementsByClassName("fas fa-minus");
+    let minus = document.getElementsByClassName("fas fa-minus");
     for (i = 0; i < minus.length; i++) {
         minus[i].addEventListener("click", removeIngredient);
     }
@@ -93,17 +93,16 @@ function closeNav() {
 //Click effect filter//
 
 let clickFilter = document.getElementById("choose-category");
+let nav = document.querySelector("#choose-category-container nav");
 clickFilter.addEventListener("click", filterOptions);
 function filterOptions(){
-    if(clickFilter.nextElementSibling.style.display == "none"){
+    if(nav.style.display != "block"){
         clickFilter.nextElementSibling.style.display = "block";
     }
     else{
         clickFilter.nextElementSibling.style.display = "none";
     }
-    
 }
-
 
 
 
