@@ -199,6 +199,9 @@ The edit function is not as i want it. I am just not competent enough so far to 
 
 ## Deployment
 
+1. Tell Heroku what applications are needed and what dependencies there are
+  1. pip3 freeze --local > requirements.txt 
+
 ## Credits
 
 ### Content
