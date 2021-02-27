@@ -1,8 +1,22 @@
 # Flask family recipe app
 
-## TOC
-
 ## UX
+
+### User stories
+
+* My mum
+  * She always asks me about recipes so this might be very convenient for her
+  * She is interested in sharing the recipes she inherited from her mum and grandmother
+  * In this way she can once and for all make sure that we all know how to cook the christmas food properly, that is, how it has always been cooked
+* My dad
+  * He is not much of a chef really. He needs some advice now and then. He often asks how to do things. Now he can just log in here
+*  Me
+  * I want to have easy access to the christmas food for instance. I always asks my mum
+  * I want a place to store all my best recipes and i like to share them with others
+
+### Structure  
+
+This is a linear site, wanted to make things easy to find. I have also added feedback to user interaction in the form of flash messages. I have also made sure to provide state changes when the user for example hover over menu items
 
 ## Features
 
@@ -13,6 +27,8 @@ The users can share and read recipes. The users get their own pages where they c
 ### Features left to implement
 
 The edit function is not as i want it. I am just not competent enough so far to do it better. The user experience is not so good because the user has to write all the ingredients and preparation steps again. I could go for a workaround, but i decided to keep it like this and keep searching for a solution. I ran out of time because the deadline was approaching fast and i needed to do the readme and some other stuff. Work in progress though.
+
+### Wireframes
 
 ## Technologies used
 
@@ -29,7 +45,9 @@ The edit function is not as i want it. I am just not competent enough so far to 
 * Font Awsome
   * They provided the icons used in the project
 * Google Fonts 
-  * They provided the "Handlee" and "Roboto" fonts   
+  * They provided the "Handlee" and "Roboto" fonts
+* MongoDb
+  * The database i use   
 
 ## Testing
 
