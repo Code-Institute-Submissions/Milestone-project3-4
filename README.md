@@ -49,6 +49,7 @@
 * The footer
   * Test the navigation
   * If logged in the user should se a different set of menu items
+  * When pressing the phone and insta, those should appear in new windows
 
 **Result**: As expected.
 
@@ -115,6 +116,13 @@
   * When pressing the delete button, the recipe should be removed
 
 **Result**: As expected.
+
+### validation
+
+* [HTML](https://validator.w3.org/#validate_by_input)
+  * There are both errors and warnings but all of them are because i use the Flask framework
+
+
 
 
 
