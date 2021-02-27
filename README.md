@@ -30,8 +30,9 @@
 ## Testing
 
 * The desktop menu
-  * Test all the menu items
+  * Test the navigation
   * Hover over the items to see a change of state
+**Result**: It works fine.
 
 ## Deployment
 
