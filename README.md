@@ -14,9 +14,9 @@
   * I want to have easy access to the christmas food for instance. I always asks my mum
   * I want a place to store all my best recipes and i like to share them with others
 
-### Structure  
+### Wireframes
 
-This is a linear site, wanted to make things easy to find. I have also added feedback to user interaction in the form of flash messages. I have also made sure to provide state changes when the user for example hover over menu items
+
 
 ## Features
 
