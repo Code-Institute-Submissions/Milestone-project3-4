@@ -250,6 +250,10 @@ The edit function is not as i want it. I am just not competent enough so far to 
    3. Heroku will now receive the code from GitHub, and start building the app
    4. Click view to launch the app
 
+### Bugs
+
+I had some trouble with the background image. When i added new accordions, there was a zoom effect. The best solution i could come up with was setting background-repeat: repeat-y and for bigger screens where  have a max-width on the body adding background-size: *length* and background-position: center.
+
 ## Credits
 
 ### Content
