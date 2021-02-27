@@ -201,18 +201,22 @@ The edit function is not as i want it. I am just not competent enough so far to 
 
 1. Tell Heroku what applications are needed and what dependencies there are
    1. pip3 freeze --local > requirements.txt
+
 2. Create the Procfile
    1. echo web: python app.py > Procfile
    2. The Procfile might add a blank line at the bottom, and sometimes this can cause problems, so remove it
+
 3. Go to heroku.com
    1. Click **new** to create a new app
    2. Choose a unique name for the app. Use dash or minus to separate words instead of space and only lowercase letters
    3. Select the region closest to you
    4. Click **create app**
+
 4. Setup automatic deployment from our GitHub repository
    1. Make sure your GitHub profile is displayed, then add your repository name
    2. Click **search**
    3. Click to **connect**, but do not activate automatic deployment just yet
+
 5. Click on the **settings** tab
    1. Click on **reveal config vars**
    2. The first variable is **IP**, with the value of 0.0.0.0
@@ -220,9 +224,11 @@ The edit function is not as i want it. I am just not competent enough so far to 
    4. **SECRET_KEY**: Q7nT16ZJql
    5. **MONGO_URI**: mongodb+srv://chrpe30:testingpassword@myfirstcluster.dkuba.mongodb.net/recipieSite?retryWrites=true&w=majority
    6. **MONGO_DBNAME**: recipieSite
-1. Make a push to GitHub
+
+6. Make a push to GitHub
    1. the Procfile and the requirements file
-1. Go back to the deploy tab
+
+7. Go back to the deploy tab
    1. Enable Automatic Deployment
    2. I've only got the main branch for the project, so click Deploy Branch
    3. Heroku will now receive the code from GitHub, and start building the app
