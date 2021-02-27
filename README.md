@@ -32,6 +32,7 @@
 * The desktop menu
   * Test the navigation
   * Hover over the items to see a change of state
+
 **Result**: It works fine.
 
 ## Deployment
