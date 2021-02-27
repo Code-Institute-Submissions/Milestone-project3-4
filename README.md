@@ -22,7 +22,7 @@
 
 ### Existing features
 
-The users can share and read recipes. The users get their own pages where they can edit or delete the recipes they uploaded themselves. In the all reciped page all recipes are visible to those logged in, there is also a filter functionality.
+The users can share and read recipes. The users get their own pages where they can edit or delete the recipes they uploaded themselves. In the all recipes page all recipes are visible to those logged in, there is also a filter functionality.
 
 ### Features left to implement
 
