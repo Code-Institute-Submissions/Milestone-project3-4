@@ -254,7 +254,7 @@ I also want to learn how to give the user a "Are you sure you want to delete" me
 
 ### Bugs
 
-I had some trouble with the background image. When i added new accordions, there was a zoom effect. The best solution i could come up with was setting background-repeat: repeat-y and for bigger screens where  have a max-width on the body adding background-size: *length* and background-position: center.
+I had some trouble with the background image. When i added new accordions, there was a zoom effect. The best solution i could come up with was setting background-repeat: repeat-y and for bigger screens where  have a max-width on the body adding background-size: *length* and background-position: center
 
 ## Credits
 
