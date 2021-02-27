@@ -8,7 +8,11 @@
 
 ### Existing features
 
+The users can share and read recipes. The users get their own pages where they can edit or delete the recipes they uploaded themselves. In the all reciped page all recipes are visible to those logged in, there is also a filter functionality.
+
 ### Features left to implement
+
+The edit function is not as i want it. I am just not competent enough so far to do it better. The user experience is not so good because the user has to write all the ingredients and preparation steps again. I could go for a workaround, but i decided to keep it like this and keep searching for a solution. I ran out of time because the deadline was approaching fast and i needed to do the readme and some other stuff. Work in progress though.
 
 ## Technologies used
 
@@ -136,35 +140,62 @@
 
 ### Lighthouse
 
+* Home
+  * Performance 91
+  * Accessibility 100
+  * Best practices 79
+  * SEO 84
 
+* Add recipes
+  * Performance 92
+  * Accessibility 86
+  * Best practices 79
+  * SEO 87
 
+* All recipes
+  * Performance 94
+  * Accessibility 100
+  * Best practices 86
+  * SEO 84
 
+* Login
+  * Performance 95
+  * Accessibility 100
+  * Best practices 79
+  * SEO 76
 
+* Register
+  * Performance 95
+  * Accessibility 100
+  * Best practices 79
+  * SEO 76
 
+* Edit
+  * Performance 91
+  * Accessibility 81
+  * Best practices 79
+  * SEO 87
 
+### On different browsers
 
+#### Desktop
 
+* Chrome
+  * Looks fine.
 
+* Firefox
+  * Looks fine.
 
+* Edge
+  * Looks fine.
 
+#### Mobile
 
+* Safari
+  * The flexbox gap doesn´t work here it seems. It said so on "can i use" but i tried just in case, i like the function. Changed to padding on mobile instead.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+* Chrome
+  * Same as above.
 
 ## Deployment
 
