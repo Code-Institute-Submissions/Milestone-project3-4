@@ -28,6 +28,8 @@ The users can share and read recipes. The users get their own pages where they c
 
 The edit function is not as i want it. I am just not competent enough so far to do it better. The user experience is not so good because the user has to write all the ingredients and preparation steps again. I could go for a workaround, but i decided to keep it like this and keep searching for a solution. I ran out of time because the deadline was approaching fast and i needed to do the readme and some other stuff. Work in progress though
 
+I also want to learn how to give the user a "Are you sure you want to delete" message before deleting a recipe
+
 ## Technologies used
 
 * HTML 5
@@ -249,6 +251,10 @@ The edit function is not as i want it. I am just not competent enough so far to 
    2. I've only got the main branch for the project, so click Deploy Branch
    3. Heroku will now receive the code from GitHub, and start building the app
    4. Click view to launch the app
+
+### Bugs
+
+I had some trouble with the background image. When i added new accordions, there was a zoom effect. The best solution i could come up with was setting background-repeat: repeat-y and for bigger screens where  have a max-width on the body adding background-size: *length* and background-position: center
 
 ## Credits
 
