@@ -1,30 +1,39 @@
 {% extends "base.html" %}
 
 {%block content%}
+<div class="button-container">
+    <button id="addIngredient">Ingredient +</button>
+    <button id="removeIngredient">Ingredient -</button>
+    <button id="add-preparation-step">Prep +</button>
+    <button id="remove-prep">Prep -</button>
+</div>
 <section class="form-container">
+
     <div class="inner-form-container">
         <form action="{{url_for('edit_recipe', recipe_id = recipe._id)}}" method="POST">
             <label for="dish">Name of dish</label>
             <input value="{{recipe.dish}}" id="dish" class="name-of-dish" name="dish" type="text" required>
-            <label for="ingredient-field">Add ingredients</label>
-            <input id="ingredient-field" class="ingredient-field" name="ingredient" type="text" required>
-            <div class="container-for-plus"><i class="fas fa-plus plus" onclick="newIngredients()"></i></div>
+            <label for="ingredient-field">Add ingredient</label>
+            {% for i in recipe.ingredients %}
+            <input value="{{i}}" id="ingredient-field" class="ingredient-field" name="ingredient" type="text" required>
+            {%endfor%}
             <div id="container-new-ingredient"></div>
-            
+
             <label for="add-prep">Add preparation step</label>
-            <input id="add-prep" class="add-prep" name="add-prep" type="text" required>
-            <div class="container-for-plus"><i class="fas fa-plus plus" onclick="newPrep()"></i></div>
+            {% for i in recipe.preparations %}
+            <input value="{{i}}" id="add-prep" class="add-prep" name="add-prep" type="text" required>
+            {% endfor %}
             <div id="container-new-prep"></div>
             <label for="additional">Additional comments</label>
             <textarea id="additional" class="additional" name="additional">{{ recipe.additional_comments}}</textarea>
             <select name="category" id="category-select" required>
                 <option value="" disabled>Choose Category</option>
                 {% for category in categories %}
-                    {% if category.category == recipe.category %}
-                        <option value="{{ category.category }}" selected>{{ category.category }}</option>
-                    {% else %}
-                        <option value="{{ category.category }}">{{ category.category }}</option>
-                    {% endif %}
+                {% if category.category == recipe.category %}
+                <option value="{{ category.category }}" selected>{{ category.category }}</option>
+                {% else %}
+                <option value="{{ category.category }}">{{ category.category }}</option>
+                {% endif %}
                 {% endfor %}
             </select>
             <a class="cancel" href="{{ url_for('profile', username=session['user']) }}">Cancel</a>
@@ -32,5 +41,8 @@
         </form>
     </div>
 </section>
+{% block script %}
+<script src="{{ url_for('static', filename='js/add_remove.js') }}"></script>
+{% endblock %}
 
 {% endblock %}

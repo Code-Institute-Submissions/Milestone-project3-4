@@ -1,19 +1,24 @@
 {% extends "base.html" %}
 
 {%block content%}
+<div class="button-container">
+    <button id="addIngredient">Ingredient +</button>
+    <button id="removeIngredient">Ingredient -</button>
+    <button id="add-preparation-step">Prep +</button>
+    <button id="remove-prep">Prep -</button>
+</div>
 <section class="form-container">
+
     <div class="inner-form-container">
         <form action="{{url_for('add_recipie')}}" method="POST">
             <label for="dish">Name of dish</label>
             <input id="dish" class="name-of-dish" name="dish" type="text" required>
             <label for="ingredient-field">Add ingredient</label>
             <input id="ingredient-field" class="ingredient-field" name="ingredient" type="text" required>
-            <div class="container-for-plus"><i class="fas fa-plus plus" onclick="newIngredients()"></i></div>
             <div id="container-new-ingredient"></div>
 
             <label for="add-prep">Add preparation step</label>
             <input id="add-prep" class="add-prep" name="add-prep" type="text" required>
-            <div class="container-for-plus"><i class="fas fa-plus plus" onclick="newPrep()"></i></div>
             <div id="container-new-prep"></div>
             <label for="additional">Additional comments</label>
             <textarea id="additional" class="additional" name="additional" required></textarea>
@@ -27,5 +32,8 @@
         </form>
     </div>
 </section>
+{% block script %}
+<script src="{{ url_for('static', filename='js/add_remove.js') }}"></script>
+{% endblock %}
 
 {% endblock %}
