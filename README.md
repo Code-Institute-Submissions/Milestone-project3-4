@@ -151,8 +151,7 @@ I also want to learn how to give the user a "Are you sure you want to delete" me
 * [Javascript validation with JSHint](https://jshint.com/)
   * A missing semicolon. *Fixed that*
   * 6 undefined variables. *Fixed that*
-  * 4 unused variables. *It's my functions and i use them*
-  * 13 warnings: 'let' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz). *I remember from the last project that i don't have to worry about this*
+  * Warnings: 'let' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz). *I remember from the last project that i don't have to worry about this*
 
 * [Python pep8 validation using PEP8 online](http://pep8online.com/)
   * It told me some of my lines were to long. *Fixed that*
@@ -256,6 +255,8 @@ I also want to learn how to give the user a "Are you sure you want to delete" me
 ### Bugs
 
 I had some trouble with the background image. When i added new accordions, there was a zoom effect. The best solution i could come up with was setting background-repeat: repeat-y and for bigger screens where  have a max-width on the body adding background-size: *length* and background-position: center
+
+I didn´t know i need different scripts for different pages. Now i know. I added a js function and all of a sudden my accordions didn´t open. I learned from this that if i run a script on every page, it will look for the same variables and if it´s not something that is on every page it will not find them and give an error.
 
 ## Credits
 
