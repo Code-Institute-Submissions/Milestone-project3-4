@@ -24,17 +24,21 @@
         </div>
         <div class="panel">
             <h3>Ingredients</h3>
-            {% for i in i.ingredients %}
+            
             <ul>
+                {% for i in i.ingredients %}
                 <li>{{i}}</li>
+                {% endfor %}
             </ul>
-            {% endfor %}
+            
             <h3>Preparation steps</h3>
-            {% for i in i.preparations %}
+            
             <ul>
+                {% for i in i.preparations %}
                 <li>{{i}}</li>
+                {%endfor%}
             </ul>
-            {%endfor%}
+            
             <h3>Additional comments</h3>
             <p>{{i.additional_comments}}</p>
         </div>

@@ -6,13 +6,15 @@
     <div class="inner-form-container">
         <form action="{{url_for('login')}}" method="POST">
             <label for="username"><i class="fas fa-user-cog"></i> Username</label>
-            <input pattern="^[a-zA-Z0-9]{5,15}$" minlength="5" maxlength="15" class="input-fields" id="username" name="username" type="text" required>
+            <input pattern="^[a-zA-Z0-9]{5,15}$" minlength="5" maxlength="15" class="input-fields" id="username"
+                name="username" type="text" required>
             <label for="password"><i class="fas fa-unlock-alt"></i> Password</label>
-            <input pattern="^[a-zA-Z0-9]{5,15}$" minlength="5" maxlength="15" class="input-fields" id="password" name="password" type="password" required>
+            <input pattern="^[a-zA-Z0-9]{5,15}$" minlength="5" maxlength="15" class="input-fields" id="password"
+                name="password" type="password" required>
             <input value="Login" type="submit" class="submit">
         </form>
     </div>
-    
+
 </section>
 <p class="not-a-user"><a href="{{url_for('register')}}">Not a user?</a></p>
 

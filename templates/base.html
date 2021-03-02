@@ -8,13 +8,13 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
         integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
     <!--My css file-->
-        <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
     <title>{{title}}</title>
 </head>
 
 <body>
 
-<!--Header for mobile and desktop-->
+    <!--Header for mobile and desktop-->
 
     <header class="header">
         <nav>
@@ -93,7 +93,7 @@
         </div>
     </footer>
 
-    
+
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
     {% block script %}
     {% endblock %}

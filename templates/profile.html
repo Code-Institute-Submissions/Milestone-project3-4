@@ -5,28 +5,32 @@
     {% for i in users_recipes %}
     <div class="accordion-container">
         <div class="accordion">
-            
+
             <p>{{i.dish}}</p>
             <div class="delete-button"><a href="{{url_for('delete_recipe', recipe_id=i._id)}}">Del</a></div>
             <div class="edit-button"><a href="{{url_for('edit_recipe', recipe_id=i._id)}}">Edit</a></div>
         </div>
         <div class="panel">
             <h3>Ingredients</h3>
-            {% for i in i.ingredients %}
+            
             <ul>
+                {% for i in i.ingredients %}
                 <li>{{i}}</li>
+                {% endfor %}
             </ul>
-            {% endfor %}
+            
             <h3>Preparation steps</h3>
-            {% for i in i.preparations %}
+            
             <ul>
+                {% for i in i.preparations %}
                 <li>{{i}}</li>
+                {%endfor%}
             </ul>
-            {%endfor%}
+            
             <h3>Additional comments</h3>
             <p>{{i.additional_comments}}</p>
         </div>
-        
+
     </div>
     {% endfor %}
 </section>
