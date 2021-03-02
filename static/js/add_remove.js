@@ -1,6 +1,6 @@
 //New ingredients//
 
-let addNew = document.getElementById("addIngredient");
+let addNew = document.getElementById("add-ingredient");
 
 addNew.addEventListener("click", function () {
     let a = document.createElement("input");
@@ -12,7 +12,7 @@ addNew.addEventListener("click", function () {
     b.appendChild(a);
 })
 
-let removeIngredient = document.getElementById("removeIngredient");
+let removeIngredient = document.getElementById("remove-ingredient");
 removeIngredient.addEventListener("click", function (){
     let ingredientContainer = document.getElementById("container-new-ingredient");
     ingredientContainer.removeChild(ingredientContainer.lastChild);

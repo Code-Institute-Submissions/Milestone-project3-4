@@ -2,8 +2,8 @@
 
 {%block content%}
 <div class="button-container">
-    <button id="addIngredient">Ingredient +</button>
-    <button id="removeIngredient">Ingredient -</button>
+    <button id="add-ingredient">Ingredient +</button>
+    <button id="remove-ingredient">Ingredient -</button>
     <button id="add-preparation-step">Prep +</button>
     <button id="remove-prep">Prep -</button>
 </div>
@@ -37,7 +37,7 @@
                 {% endfor %}
             </select>
             <a class="cancel" href="{{ url_for('profile', username=session['user']) }}">Cancel</a>
-            <input class="submit" value="Edit task" type="submit">
+            <input class="submit" value="Edit recipe" type="submit">
         </form>
     </div>
 </section>
