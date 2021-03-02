@@ -71,7 +71,7 @@ I also want to learn how to give the user a "Are you sure you want to delete" me
 * The footer
   * Test the navigation
   * If logged in the user should se a different set of menu items
-  * When pressing the phone and insta, those should appear in new windows
+  * When pressing the phone and instagram, those should appear in new windows
 
 **Result**: As expected.
 
@@ -84,12 +84,13 @@ I also want to learn how to give the user a "Are you sure you want to delete" me
   * The title of the page should read "user's recipes"
   * In MongoDb there should be a new user in the "users" collection
   * Under the form there is a link that when clicked takes the user to the login page
+  * If a username is taken, the user should get a flash message and be redirected to the form
 
 **Result**: As expected.
 
 * Log in
   * It shouldn't be possible to get in without entering the correct credentials
-  * If entering the wrong credentials a flashmessage will show up
+  * If entering the wrong credentials a flash message will show up
   * Both fields are required so if hovering over the fields when empty a message will show up
   * If trying to submit with empty field a message will show up
   * When logged in the user will be redirected to the profile page and a welcome flash message will show up
@@ -107,14 +108,14 @@ I also want to learn how to give the user a "Are you sure you want to delete" me
 
 * Add recipe
   * The user fills in the form and pushes submit. Then a new recipe appears in MongoDB
-  * When the user pushes the plus sign, a new add ingredient or preparation step field appears
-  * When clicking the minus, the add ingredient/add preparation step is removed
+  * When the user pushes the buttons on top, ingredient or preparation field appears or dissapears
+  * All fields are required, so empty fields are not allowed
 
-**Result**: As expected.
+**Result**: As expected. It is however possible to use blankspaces only and submit a recipe.
 
 * Edit recipe
-  * The current name of the dish and the additional comments appears
-  * If updating, the user has to enter all the ingredients again, with the new ingredients
+  * The current recipe appears
+  * Test the add and remove buttons
   * When pressing submit, the recipe is updated in MongoDb
   * Otherwise the form should work as the add recipe form
 
@@ -130,7 +131,7 @@ I also want to learn how to give the user a "Are you sure you want to delete" me
 **Result**: As expected.
 
 * My recipes
-  * All recipes entered the user should appear
+  * All recipes entered by the user should appear
   * When pressing an accordion it should open and reveal the recipe
   * When the accordion opens the + should change to -
   * When pressing the accordion again the accordion should close and the - change to +
