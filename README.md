@@ -13,6 +13,8 @@
 * Me
   * I want to have easy access to the christmas food for instance. I always asks my mum
   * I want a place to store all my best recipes and i like to share them with others
+* My brother-in-law
+  * He is very good at baking and he likes to share his recipes and he also wants to learn vegetarian cooking. Here he can do both
 
 ### Wireframes
 
@@ -26,9 +28,13 @@ The users can share and read recipes. The users get their own pages where they c
 
 ### Features left to implement
 
-The edit function is not as i want it. I am just not competent enough so far to do it better. The user experience is not so good because the user has to write all the ingredients and preparation steps again. I could go for a workaround, but i decided to keep it like this and keep searching for a solution. I ran out of time because the deadline was approaching fast and i needed to do the readme and some other stuff. Work in progress though
+The edit function is not as i want it. I want to have a form with more control for the user. I want the user to be able to delete a specific line and also to insert lines in between lines. 
 
-I also want to learn how to give the user a "Are you sure you want to delete" message before deleting a recipe
+I also want to add the option to include images in the recipes.
+
+The option to rate recipes with star rating would be cool.
+
+I also want to learn how to give the user a "Are you sure you want to delete" message before deleting a recipe.
 
 ## Technologies used
 
