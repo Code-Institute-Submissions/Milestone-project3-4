@@ -22,13 +22,13 @@ removeIngredient.addEventListener("click", function () {
 
 let addNewPrep = document.getElementById('add-preparation-step');
 addNewPrep.addEventListener("click", function () {
-    let a = document.createElement("input");
-    let b = document.getElementById("container-new-prep");
-    a.setAttribute("class", "add-prep");
-    a.setAttribute("name", "add-prep");
-    a.setAttribute("type", "text");
+    let c = document.createElement("input");
+    let d = document.getElementById("container-new-prep");
+    c.setAttribute("class", "add-prep");
+    c.setAttribute("name", "add-prep");
+    c.setAttribute("type", "text");
 
-    b.appendChild(a);
+    d.appendChild(c);
 });
 
 let removePrep = document.getElementById("remove-prep");

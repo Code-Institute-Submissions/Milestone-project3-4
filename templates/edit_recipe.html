@@ -14,16 +14,21 @@
             <label for="dish">Name of dish</label>
             <input value="{{recipe.dish}}" id="dish" class="name-of-dish" name="dish" type="text" required>
             <label for="ingredient-field">Add ingredient</label>
-            {% for i in recipe.ingredients %}
-            <input value="{{i}}" id="ingredient-field" class="ingredient-field" name="ingredient" type="text" required>
-            {%endfor%}
-            <div id="container-new-ingredient"></div>
+
+            <div id="container-new-ingredient">
+                {% for i in recipe.ingredients %}
+                <input value="{{i}}" id="ingredient-field" class="ingredient-field" name="ingredient" type="text"
+                    required>
+                {%endfor%}
+            </div>
 
             <label for="add-prep">Add preparation step</label>
-            {% for i in recipe.preparations %}
-            <input value="{{i}}" id="add-prep" class="add-prep" name="add-prep" type="text" required>
-            {% endfor %}
-            <div id="container-new-prep"></div>
+
+            <div id="container-new-prep">
+                {% for i in recipe.preparations %}
+                <input value="{{i}}" id="add-prep" class="add-prep" name="add-prep" type="text" required>
+                {% endfor %}
+            </div>
             <label for="additional">Additional comments</label>
             <textarea id="additional" class="additional" name="additional">{{ recipe.additional_comments}}</textarea>
             <select name="category" id="category-select" required>
@@ -42,7 +47,7 @@
     </div>
 </section>
 {% block script %}
-<script src="{{ url_for('static', filename='js/add_remove.js') }}"></script>
+<script src="{{ url_for('static', filename='js/add_recipe.js') }}"></script>
 {% endblock %}
 
 {% endblock %}

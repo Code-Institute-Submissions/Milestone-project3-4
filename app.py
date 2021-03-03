@@ -17,6 +17,7 @@ app.secret_key = os.environ.get("SECRET_KEY")
 
 mongo = PyMongo(app)
 
+
 # Home page
 
 
@@ -25,6 +26,7 @@ def index():
     return render_template(
         "index.html", header="Family Recipes",
         title="Family recipes, homepage")
+
 
 # Add recipe
 
@@ -50,6 +52,7 @@ def add_recipie():
         "add_recipie.html", categories=categories,
         header="Add Recipe", title="Family recipes, add recipe")
 
+
 # All recipes
 
 
@@ -62,6 +65,7 @@ def all_recipies():
         header="All Recipes", categories=categories,
         title="Family recipes, all recipes")
 
+
 # Categories
 
 
@@ -71,6 +75,7 @@ def categories(category):
     return render_template(
         "categories.html", food_category=food_category,
         header=category, title="Family recipes, categories")
+
 
 # Users page
 
@@ -85,6 +90,7 @@ def profile(username):
         "profile.html", username=username, users_recipes=users_recipes,
         header=session["user"]+"'s recipes",
         title="Family recipes, users page")
+
 
 # Edit recipe
 
@@ -114,11 +120,13 @@ def edit_recipe(recipe_id):
 
 # Delete recipe
 
+
 @app.route("/delete_recipe/<recipe_id>")
 def delete_recipe(recipe_id):
     mongo.db.recipies.remove({"_id": ObjectId(recipe_id)})
     flash("Recipe Deleted")
     return redirect(url_for("profile", username=session["user"]))
+
 
 # login
 
@@ -146,6 +154,7 @@ def login():
     return render_template("login.html", header="Login",
                            title="Family recipes, login")
 
+
 # Register
 
 
@@ -169,6 +178,7 @@ def register():
         return redirect(url_for("profile", username=session["user"]))
     return render_template("register.html", header="Register",
                            title="Family recipes, register")
+
 
 # logout
 
