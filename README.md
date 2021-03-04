@@ -278,7 +278,7 @@ I got some help from my mentor and the tutor team. They are good at nodding me i
 
 I found the images i use on [Pexels](https://www.pexels.com/sv-se/) 
 
-The animated sidenav is from [w3s](https://www.w3schools.com/howto/howto_js_sidenav.asp)
+The animated sidenav is from [w3s](https://www.w3schools.com/howto/howto_js_sidenav.asp) and the accordions are heavy inspired by them. I am capable of implementing the basic functionality of open and close, but the changing of + to - i copied from them.
 
 ### Acknowledgements
 
