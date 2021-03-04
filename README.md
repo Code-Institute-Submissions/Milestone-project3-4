@@ -277,4 +277,5 @@ The animated sidenav is from [w3s](https://www.w3schools.com/howto/howto_js_side
 ### Acknowledgements
 
 I was inspired to use accordions for the project by looking at the Mini project code institute videos.
+
 I got some help from my mentor and the tutor team. They are good at nodding me in the right direction when i need it.
