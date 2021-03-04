@@ -18,9 +18,8 @@
 
 ### Wireframes
 
-[A link to my wireframes](https://xd.adobe.com/view/3bdd9ff8-f20b-486a-b70a-c54da33f2ede-6e8e/)
-
-![Some wireframes](assets/images/wireframes.PNG)
+![Wireframes](assets/images/wireframes.PNG)
+![Database relations](assets/images/db_relations.PNG)
 
 ## Features
 
