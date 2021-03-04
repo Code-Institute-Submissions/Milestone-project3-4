@@ -16,7 +16,7 @@
 * My brother-in-law
   * He is very good at baking and he likes to share his recipes and he also wants to learn vegetarian cooking. Here he can do both
 
-### Wireframes
+### Wireframes for mobile, tablet/desktop and database relations diagram
 
 ![wireframes_mobile](assets/images/wireframes_mobile.PNG)
 
