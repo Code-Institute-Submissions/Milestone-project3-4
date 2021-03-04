@@ -47,7 +47,7 @@ def add_recipie():
         }
 
         mongo.db.recipies.insert(recipie)
-        flash("Recipie added")
+        flash("Recipe added")
     return render_template(
         "add_recipie.html", categories=categories,
         header="Add Recipe", title="Family recipes, add recipe")
@@ -193,4 +193,4 @@ def logout():
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
-            debug=True)
+            debug=False)

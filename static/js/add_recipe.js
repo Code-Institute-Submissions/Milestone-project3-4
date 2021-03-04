@@ -12,10 +12,10 @@ addNew.addEventListener("click", function () {
     b.appendChild(a);
 });
 
-let removeIngredient = document.getElementById("remove-ingredient");
+let removeIngredient = document.querySelector("#remove-ingredient");
 removeIngredient.addEventListener("click", function () {
-    let ingredientContainer = document.getElementById("container-new-ingredient");
-    ingredientContainer.removeChild(ingredientContainer.lastChild);
+    let ingredientContainer = document.querySelector("#container-new-ingredient");
+    ingredientContainer.removeChild(ingredientContainer.lastElementChild);
 });
 
 //New cooking step//
