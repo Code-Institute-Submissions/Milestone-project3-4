@@ -272,14 +272,9 @@ I didn´t know i need different scripts for different pages. Now i know. I added
 
 ### Content
 
-I got some help from my mentor and the tutor team. They are good at nodding me in the right direction when i need it
-
-### Media
-
-I found the images i use on [Pexels](https://www.pexels.com/sv-se/) 
-
-The animated sidenav is from [w3s](https://www.w3schools.com/howto/howto_js_sidenav.asp) and the accordions are heavily inspired by them. I am capable of implementing the basic accordion functionality of open and close, but the changing of + to - i copied from them.
+The animated sidenav is from [w3s](https://www.w3schools.com/howto/howto_js_sidenav.asp) and the accordions are also heavily inspired by them. I am capable of implementing the basic accordion functionality of open and close, but the changing of + to - i copied from them.
 
 ### Acknowledgements
 
-I was inspired to use accordions for the project by looking at the Mini project code institute videos
+I was inspired to use accordions for the project by looking at the Mini project code institute videos.
+I got some help from my mentor and the tutor team. They are good at nodding me in the right direction when i need it.
