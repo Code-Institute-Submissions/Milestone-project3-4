@@ -18,15 +18,9 @@
 
 ### Wireframes
 
-#### Mobile
-
 ![wireframes_mobile](assets/images/wireframes_mobile.PNG)
 
-#### Tablet and desktop
-
 ![wireframes_tablet_desktop](assets/images/wireframes.PNG)
-
-#### Database relations diagram
 
 ![Database relations](assets/images/db_relations.PNG)
 
